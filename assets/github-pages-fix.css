@@ -1,0 +1,31 @@
+/* GitHub Pages fallback: show the creative engine without React hydration. */
+.creative-engine .engine-source {
+  opacity: 1;
+  transform: translate(-50%, -46%) scale(1);
+}
+
+.creative-engine .engine-format,
+.creative-engine .engine-pill,
+.creative-engine .engine-orbit {
+  opacity: 1;
+}
+
+.creative-engine .engine-format,
+.creative-engine .engine-pill {
+  transform: none;
+  animation-play-state: running;
+}
+
+.creative-engine .engine-connector {
+  transform: rotate(var(--line-angle)) scaleX(1);
+}
+
+.creative-engine .engine-pill::before {
+  transform: rotate(var(--pill-angle, 0deg)) scaleX(1);
+}
+
+@media (max-width: 980px) {
+  .creative-engine .engine-source {
+    transform: scale(1);
+  }
+}
